@@ -1,0 +1,50 @@
+.mask-custom {
+    backdrop-filter: blur(5px);
+    background-color: rgba(178, 60, 253, 0.35);
+}
+
+.mask-custom2 {
+    backdrop-filter: blur(5px);
+    background-color: rgba(118, 90, 153, 0.35);
+}
+
+.mask-custom3 {
+    backdrop-filter: blur(5px);
+    background-color: rgba(218, 190, 53, 0.35);
+}
+
+.display-pc{
+    height: 500px;
+}
+
+@media only screen and (max-width: 1000px)  {
+    .movil{
+        margin-right: 20% !important;
+        margin-top: 10% !important;
+        margin-left: 20% !important;
+        width: 60% !important;
+        height: 500px;
+
+    }
+    .movil2{
+        display: block !important;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px)  {
+    .movil{
+        margin-right: 10% !important;
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        width: 80% !important;
+        height: 550px;
+
+    }
+    .movil2{
+        display: block !important;
+
+    }
+
+}

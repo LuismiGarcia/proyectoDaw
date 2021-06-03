@@ -1,0 +1,177 @@
+
+
+.chat{
+    top: 60%;
+    left: 62%;
+    min-width: 448px !important;
+    width: 35%;
+}
+
+#conversacion{
+    height: 300px;
+}
+
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 35px; /*--Set height of tabs--*/
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    width: 100%;
+}
+ul.tabs li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 34px; /*--Subtract 1px from the height of the unordered list--*/
+    line-height: 31px; /*--Vertically aligns the text within the tab--*/
+    border: 1px solid #999;
+    border-left: none;
+    margin-bottom: -1px; /*--Pull the list item down 1px--*/
+    overflow: hidden;
+    position: relative;
+    background: #e0e0e0;
+    width: 25%;
+
+}
+ul.tabs li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 1.2em;
+    padding: 0 10px;
+    border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+    outline: none;
+}
+ul.tabs li a:hover {
+    background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not
+        listen to the hover properties--*/
+    background: #fff;
+    border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with
+        its content--*/
+}
+
+.sesiones{
+    top: 21%;
+    left: 60%;
+    max-width: 448px !important;
+}
+
+.scroll{
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 100px;
+}
+.unidades{
+    margin-top: 7%;
+    margin-bottom: 4%;
+
+}
+
+.tab_container {
+    border: 1px solid #999;
+    border-top: none;
+    overflow: hidden;
+    clear: both;
+    float: left; width: 100%;
+    background: #fff;
+}
+.tab_content {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.tabs{
+    font-size: calc(0.5rem + 0.35vw);
+}
+
+#content{
+    width:450px;
+    height:150px;
+    display: flex;
+}
+
+.box{
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    transition: all .3s;
+    overflow:hidden;
+}
+
+.box>div{
+    position: absolute;
+    left: 0;
+    max-width: 150px;
+    top: 0;
+    width: calc(450px - 40%);
+    padding: 15px;
+}
+
+.box.active{
+    -ms-flex: 1 1 60%;
+    flex: 1 1 60%;
+}
+
+#box1{
+    background:pink;
+}
+#box2{
+    background:gray;
+}
+
+@media screen and (max-width: 1300px){
+    .sesiones{
+        position: relative !important;
+        margin-top: 5% !important;
+        margin-left: 4% !important;
+        min-width: 300px !important;
+        left: 0 !important;
+    }
+
+    .chat{
+        position: relative !important;
+        margin-top: 5% !important;
+        margin-left: 4% !important;
+        width: 400px;
+        left: 0 !important;
+
+
+    }
+    .unidades{
+        min-width: 400px !important;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .chat{
+        position: relative;
+        float:left;
+        margin-top: 5% !important;
+        min-width: 400px !important;
+        margin-bottom: 5%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 620px){
+
+    .chat{
+
+        float:left;
+        margin-top: 5% !important;
+        min-width: 300px !important;
+        margin-bottom: 5%;
+    }
+
+
+
+}
