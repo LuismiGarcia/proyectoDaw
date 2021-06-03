@@ -8,9 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Notifications\ResetPassword;
 
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+
 
     public $timestamps = false;
     /**
@@ -26,6 +29,8 @@ class User extends Authenticatable
         'dni',
         'password',
     ];
+
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -46,6 +51,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+
     /**
      * Send the password reset notification.
      *
@@ -62,14 +69,23 @@ class User extends Authenticatable
     }
 
     public function esAdmin(){
-        if ($this->id_role =='1'){
-            return true;
+
+            if ($this->id_role == '1') {
+                return true;
+
         }
         return false;
     }
 
     public function esProfesor(){
         if ($this->id_role =='2'){
+            return true;
+        }
+        return false;
+    }
+
+    public function esAlumno(){
+        if ($this->id_role =='3'){
             return true;
         }
         return false;

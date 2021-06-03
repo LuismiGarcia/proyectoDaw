@@ -22,13 +22,13 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
+/*
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/inicio';
+   /* protected $redirectTo = '/inicio';*/
 
     /**
      * Create a new controller instance.
@@ -38,8 +38,19 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+
     }
 
+    protected function authenticated()
+    {
+        if (Auth::user()->id_role==1) {
+            return redirect('/administrador') ;
+        } else {
+            return redirect('/inicio');
+        }
+    }
+
+    /*Función que hace que al desloguearse el usuario que ha iniciado sesión se vaya a /inicio*/
     public function logout(Request $request) {
         Auth::logout();
         return redirect('/inicio');

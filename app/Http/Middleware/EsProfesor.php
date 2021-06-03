@@ -20,13 +20,10 @@ class EsProfesor
 
         $user = Auth::user();
 
-        if (!$user->esProfesor()) {
-            if(!$user->esAdmin()) {
-                return redirect('/miscursos1');
-            }else
+        if(!$user->esProfesor()){
+            if(!$user->esAdmin())
                 return redirect('/inicio');
         }
-
             return $next($request);
     }
 }
